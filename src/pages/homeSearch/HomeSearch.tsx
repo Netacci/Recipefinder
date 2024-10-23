@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModeToggle } from '@/components/mode-toggle';
+
 import { useTheme } from '@/components/theme-provider';
 import SearchFood from '../search/Search';
 import { Toaster } from 'react-hot-toast';
@@ -17,10 +17,6 @@ const Home: React.FC = () => {
       }`}
     >
       <Toaster />
-      <div className="fixed top-0  right-0 p-2 sm:p-4">
-        {' '}
-        <ModeToggle />
-      </div>
 
       <div className='container mx-auto p-8 max-w-4xl'>
         <SearchFood />

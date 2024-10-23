@@ -3,6 +3,7 @@ import { ThemeProvider } from './components/theme-provider';
 import { Route, Routes } from 'react-router-dom';
 import { ROUTES } from './utils/routes';
 import Loader from './components/loader/Loader';
+import { ModeToggle } from './components/mode-toggle';
 
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
   const ComingSoon = lazy(() => import('./pages/comingsoon/ComingSoon'));
   return (
     <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
+         <div className="fixed top-0  right-0 p-2 sm:p-4">
+        {' '}
+        <ModeToggle />
+      </div>
       <Routes>
         <Route
           path={ROUTES.home}
